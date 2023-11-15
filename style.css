@@ -390,6 +390,17 @@ body{
 	width: 350px;
 	height: 500px;
 	margin-bottom: 32px;
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.scroll__el-image:hover{	
+	transform: scale(1.05);
+}
+
+.scroll__el-image:hover .scroll__el-underline{
+	background-color: black;
+	width: 1000px;
 }
 
 .scroll__el-title{
@@ -425,6 +436,11 @@ body{
 	bottom: 0px;
 }
 
+.info__screen{
+	padding: 100px 48px 32px 48px;
+	position: relative;
+}
+
 .info__screen-title{
 	color: #000;
 	font-family: Poppins;
@@ -432,5 +448,66 @@ body{
 	font-style: normal;
 	font-weight: 500;
 	line-height: 123.5%;
-	margin-left: 48px;
+	margin: 0;
+	margin-bottom: 16px;
 }
+
+.info__text{
+	color: #000;
+	font-family: Poppins;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 123.5%;
+	margin: 0;
+}
+
+.info__text-container{
+	display: flex;
+	flex-direction: row;
+	gap: 240px;
+	margin-bottom: 48px;
+}
+
+.info__img-title, .info__img-text, .info__download{
+	z-index: 10;
+	position: relative;
+}
+
+.info__img-container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between
+}
+
+.info__img{
+	position: absolute;
+	max-width: 100%;
+	border-radius: 28px;
+	z-index: 1;
+}
+
+.info__img-title{
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 123.5%;
+	margin: 0;
+}
+
+.info__img-text{
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 123.5%;
+	margin: 0;
+}
+
+/* .img__text-container{
+	
+} */
+
