@@ -466,25 +466,20 @@ body{
 	flex-direction: row;
 	gap: 240px;
 	margin-bottom: 48px;
+	grid-area: 1/1/2/2;
 }
 
-.info__img-title, .info__img-text, .info__download{
-	z-index: 10;
-	position: relative;
-}
 
 .info__img-container{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content:space-between
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
 }
 
 .info__img{
-	position: absolute;
 	max-width: 100%;
 	border-radius: 28px;
-	z-index: 1;
+	grid-area: 1/1/2/2;
 }
 
 .info__img-title{
