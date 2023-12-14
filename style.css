@@ -99,11 +99,13 @@ body{
 	font-weight: 600;
 	margin: 0px;
 	margin-right: 12px;
+	cursor: pointer;
 }
 
 .header__logo-icon{
 	margin: 0px;
 	width: 14px;
+	cursor: pointer;
 }
 
 .main__screen{
@@ -429,7 +431,7 @@ body{
 
 .scroll__el-underline{
 	width: 300px;
-	height: 3px;
+	height: 2px;
 	background-color: #b4b4b4;
 	border: none;
 	border-radius: 100px;
@@ -438,8 +440,10 @@ body{
 }
 
 .scroll__el-underline-current{
+	height: 3px;
 	transform: scale(1.1);
-	background-color: #141414;
+	background-color: #333333;
+	
 }
 
 .info__screen{
@@ -473,6 +477,9 @@ body{
 	margin-bottom: 48px;
 }
 
+.info__download{
+	cursor: pointer;
+}
 
 .info__img-container{
 	display: grid;
@@ -616,6 +623,7 @@ body{
 
 .reviews__author-img{
 	width: 71px;
+	cursor: pointer;
 }
 
 #current__author-img{
@@ -676,6 +684,7 @@ body{
 	gap: 16px;
 	height: 100px;
 	width: 100%;
+	cursor: pointer;
 }
 
 
@@ -833,6 +842,7 @@ ul{
 	font-style: normal;
 	font-weight: 400;
 	line-height: 123.5%;
+	cursor: pointer;
 }
 
 .footer__container{
@@ -848,6 +858,7 @@ ul{
 	gap: 4px;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .footer__text-container{
