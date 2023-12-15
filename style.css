@@ -798,6 +798,15 @@ ul{
 	display: flex;
 	justify-content: space-between;
 	padding: 0px 12px;
+	position: relative;
+}
+
+.circleForCurrent{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	border: 2px solid red;
+	border-radius: 100px;
 }
 
 .order__button{
