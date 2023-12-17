@@ -542,14 +542,14 @@ body{
 }
 
 .info__screen-scroll-el_current{
-	height: 4px;
 	background-color: #202020;
+	transform: scale(1.1);
 	transition: 200ms;
 	cursor: pointer;
 }
 
 .info__screen-scroll-el:hover{
-	transform: scale(1.05);
+	transform: scale(1.1);
 	cursor: pointer;
 }
 
@@ -801,12 +801,18 @@ ul{
 	position: relative;
 }
 
-.circleForCurrent{
-	width: 25px;
-	height: 25px;
+.current-circle{
+	width: 40px;
+	height: 40px;
 	position: absolute;
-	border: 2px solid red;
+	border: 3px solid;
+	border-color: #80847c;
 	border-radius: 100px;
+	top: 4px;
+	left: 89px;
+	transition: 250ms;
+	z-index: 1;
+	cursor: pointer;
 }
 
 .order__button{
@@ -839,12 +845,13 @@ ul{
 .color-picker__circle{
 	width: 28px;
 	cursor: pointer;
-	transition: 150ms;
+	transition: 250ms;
+	z-index: 2;
 }
 
 .color-picker__circle-current{
-	transform: scale(1.5);
-	transition: 150ms;
+	transform: scale(1.25);
+	transition: 250ms;
 }
 
 .order__img-container{
