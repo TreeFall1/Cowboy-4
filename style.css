@@ -377,7 +377,7 @@ body{
 	display: flex;
 	justify-content: center;
 	gap: 64px;
-	overflow-x: auto;
+	overflow-x: scroll;
 }
 
 .scroll__el{
