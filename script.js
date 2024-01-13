@@ -73,4 +73,35 @@ const infoMakeLineActive = function(el){
 	deleteClassForIDs(getId(el), document.querySelectorAll(".info__screen-scroll-el"), "info__screen-scroll-el_current", 3)
 }
 
-addListenerForArray(infoScreenScrollElements, "click", infoMakeLineActive)
+addListenerForArray(infoScreenScrollElements, "click", infoMakeLineActive);
+
+anime({
+	targets: ".header__logo-icon",
+	rotate: [
+		{value: 360, duration: 2500},
+		{value: 0, duration: 2500},
+	],
+	loop: true,
+});
+
+const scrollToLeft = anime({
+  targets: ".scroll__el",
+	translateX: [
+		{value: -1400, duration: 1},
+		{value: 0, duration: 2000},
+	],
+	autoplay: false,
+
+});
+
+const scrollToRigth = anime({
+  targets: ".scroll__el",
+	translateX: -1400,
+	duration: 2000,
+	autoplay: false,
+});
+
+const scrollNextBtn = document.querySelector("#next-button");
+const scrollStartBtn = document.querySelector("#toStart-button")
+scrollNextBtn.onclick=scrollToRigth.play;
+scrollStartBtn.onclick=scrollToLeft.play;
