@@ -105,3 +105,23 @@ const scrollNextBtn = document.querySelector("#next-button");
 const scrollStartBtn = document.querySelector("#toStart-button")
 scrollNextBtn.onclick=scrollToRigth.play;
 scrollStartBtn.onclick=scrollToLeft.play;
+
+const priceScreenAnimation = anime({
+	targets: ".price__screen-img",
+	scale: 1.3,
+	duration: 1000,
+	delay: anime.stagger(100),
+	loop: true,
+	autoplay: false,
+	easing: "linear"
+})
+
+const animateOnScroll = function (div, speed = 1, offset = 0) {
+  const scrollPercent = window.pageYOffset - div.offsetTop;
+  return (scrollPercent + offset) / speed;
+};
+
+const startAnimationSection = document.querySelector(".price__screen");
+window.onscroll = function () {
+  priceScreenAnimation.seek(animateOnScroll(startAnimationSection, 1000, 200) * priceScreenAnimation.duration);
+};
