@@ -382,48 +382,18 @@ body::-webkit-scrollbar {
 	min-height: 750px;
 	display: flex;
 	gap: 64px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 	position: relative;
 }
 
 .scroll__wrapper::-webkit-scrollbar{
-	height: 0px;
+	height: 10px;
 }
 
 .scroll__wrapper::-webkit-scrollbar-thumb{
 	background-color: #444444;
 	border-radius: 50px;
 
-}
-
-.scroll__btn{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 50px;
-	height: 90px;
-	background-color: #000;
-	color: white;
-	font-family: Poppins;
-	border: 1px solid #fff;
-	border-radius: 100px;
-	cursor: pointer;
-	margin: 0px 30px;
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -70%);
-}
-
-#toStart-button{
-	left: 1%
-}
-
-#next-button{
-	left: 93.5%;
-}
-
-#toStart-button img{
-	transform: rotate(180deg);
 }
 
 .scroll__el{

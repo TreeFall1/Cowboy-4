@@ -84,31 +84,9 @@ anime({
 	loop: true,
 });
 
-const scrollToLeft = anime({
-  targets: ".scroll__el",
-	translateX: [
-		{value: -1400, duration: 1},
-		{value: 0, duration: 2000},
-	],
-	autoplay: false,
-
-});
-
-const scrollToRigth = anime({
-  targets: ".scroll__el",
-	translateX: -1400,
-	duration: 2000,
-	autoplay: false,
-});
-
-const scrollNextBtn = document.querySelector("#next-button");
-const scrollStartBtn = document.querySelector("#toStart-button")
-scrollNextBtn.onclick=scrollToRigth.play;
-scrollStartBtn.onclick=scrollToLeft.play;
-
 const priceScreenAnimation = anime({
 	targets: ".price__screen-img",
-	scale: 1.3,
+	scale: 1.15,
 	duration: 1000,
 	delay: anime.stagger(100),
 	loop: true,
@@ -121,7 +99,23 @@ const animateOnScroll = function (div, speed = 1, offset = 0) {
   return (scrollPercent + offset) / speed;
 };
 
-const startAnimationSection = document.querySelector(".price__screen");
+const startAnimationSection = document.querySelector(".main-screen__button");
 window.onscroll = function () {
   priceScreenAnimation.seek(animateOnScroll(startAnimationSection, 1000, 200) * priceScreenAnimation.duration);
 };
+
+gsap.registerPlugin(ScrollTrigger) 
+const container = document.querySelector(".key__features-screen");
+const sections = gsap.utils.toArray(".scroll__el");
+
+let scrollTween = gsap.to(sections, {
+  xPercent: -100 * (sections.length - 4),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".key__features-screen",
+    pin: true,
+    scrub: 1,
+    end: "+=2000",
+    markers: false,
+  }
+});
